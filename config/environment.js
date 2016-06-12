@@ -16,6 +16,10 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    contentSecurityPolicy: {
+      'connect-src': "'self' http://shaiivido.herokuapp.com"
     }
   };
 
@@ -41,10 +45,6 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
 
-  }
-
-  ENV.contentSecurityPolicy = {
-    'connect-src': "'self' http://shaiivido.herokuapp.com"
   }
 
   return ENV;
